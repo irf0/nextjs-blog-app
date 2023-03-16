@@ -19,7 +19,7 @@ const PostDetails = ({ post }) => {
       <div className="flex">
         <div className="w-4/5 border-r sm:border-none border-gray-500 h-screen sm:w-full">
           <div className="w-full">
-            <Author author={post.author} post={post} />
+            <Author post={post} />
             <PostDetail post={post} />
             <CommentsForm slug={post.slug} />
             <Comments slug={post.slug} />
