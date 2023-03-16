@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { getRecentPosts, getSimilarPosts } from "../services";
 
-const PostWidget = ({ categories, slug, isDarkMode, setIsDarkMode }) => {
+const PostWidget = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
