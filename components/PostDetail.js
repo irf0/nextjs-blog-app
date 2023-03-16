@@ -73,21 +73,21 @@ const PostDetail = ({ post }) => {
         <div className="flex gap-2">
           <h2 className="font-semibold">Share on </h2>
           <TwitterShareButton
-            url={`https://nextjs-blog-app-sigma-five.vercel.app/${post.slug}`}
+            url={`https://nextjs-blog-app-sigma-five.vercel.app/post/${post.slug}`}
             title={`Checkout this amazing blog about ${post.title}`}
             image={post.featuredImage.url}
           >
             <TwitterIcon size={32} round />
           </TwitterShareButton>
           <LinkedinShareButton
-            url={`https://nextjs-blog-app-sigma-five.vercel.app/${post.slug}`}
+            url={`https://nextjs-blog-app-sigma-five.vercel.app/post/${post.slug}`}
             title={`Checkout this amazing blog ${post.title}`}
             image={post.featuredImage.url}
           >
             <LinkedinIcon size={32} round />
           </LinkedinShareButton>
           <WhatsappShareButton
-            url={`https://nextjs-blog-app-sigma-five.vercel.app/${post.slug}`}
+            url={`https://nextjs-blog-app-sigma-five.vercel.app/post/${post.slug}`}
             title={`Checkout this amazing blog about ${post.title}`}
             image={post.featuredImage.url}
           >
