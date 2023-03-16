@@ -9,16 +9,16 @@ const Author = ({ post }) => {
         <Link href="https://dev-irfan.vercel.app" target="_blank">
           <div className="flex">
             <img
-              src={post.author.photo.url}
-              alt={post.author.name}
+              src={post?.author?.photo?.url}
+              alt={post?.author?.name}
               className="w-10 h-10"
             />
             <div className="flex flex-col">
               <p className="flex items-center font-carter-one cursor-pointer">
-                {post.author.name}
+                {post?.author?.name}
               </p>
               <span className="align-middle flex items-center -mt-2">
-                {moment(post.createdAt).format("MMM DD, YYYY")}
+                {moment(post?.createdAt).format("MMM DD, YYYY")}
               </span>
             </div>
           </div>

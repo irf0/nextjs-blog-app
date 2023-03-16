@@ -14,12 +14,12 @@ const PostCard = ({ post }) => {
           <div className="flex justify-between text-center px-1">
             <div className="flex">
               <img
-                src={post.author.photo.url}
-                alt={post.author.name}
+                src={post?.author?.photo?.url}
+                alt={post?.author?.name}
                 className="w-10 h-10"
               />
               <p className="flex items-center font-carter-one text-gray-600 cursor-pointer">
-                {post.author.name}
+                {post?.author?.name}
               </p>
             </div>
 
@@ -48,7 +48,7 @@ const PostCard = ({ post }) => {
             {post.title}
           </h1>
           <p className="font-Montserrat mx-5 max-w-prose">{post.excerpt}</p>
-          <Link href={`post/${post.slug}`}>
+          <Link href={`post/${post?.slug}`}>
             <button className="p-1 bg-yellow-300 mb-3 w-4/5 mx-5 rounded-sm">
               Read More
             </button>
