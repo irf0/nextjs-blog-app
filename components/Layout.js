@@ -8,6 +8,10 @@ const Layout = ({ children, isDarkMode, setIsDarkMode }) => {
       <Head>
         <title>DevSpeaks</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Discover the latest insights and perspectives on web development with our blog. Get expert tips, tutorials, and news on building fast, scalable, and modern web applications"
+        />
       </Head>
 
       <header>
