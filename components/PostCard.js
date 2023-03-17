@@ -5,10 +5,14 @@ import Link from "next/link";
 const PostCard = ({ post }) => {
   return (
     <>
-      <div className="container shadow-xl w-80 h-fit sm:w-80 sm:h-fit mt-3 flex flex-col flex-wrap mx-auto rounded-md whitespace-normal">
+      <div className="container shadow-xl  lg:ml-3 xl:ml-3 md:ml-3 w-80 m-2 h-fit sm:w-80 sm:h-fit mt-3 flex flex-col flex-wrap mx-auto rounded-md whitespace-normal">
         <div className="relative overflow-hidden rounded-md m-1">
           {/* Post Image */}
-          <img src={post.featuredImage.url} alt="post" className="w-full" />
+          <img
+            src={post.featuredImage.url}
+            alt="post"
+            className="w-full max-h-fit"
+          />
 
           {/* User & Date */}
           <div className="flex justify-between text-center px-1">

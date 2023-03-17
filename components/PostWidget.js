@@ -8,9 +8,7 @@ const PostWidget = ({ categories, slug }) => {
 
   useEffect(() => {
     if (slug) {
-      getSimilarPosts(categories, slug).then((result) =>
-        setRelatedPosts(result)
-      );
+      getSimilarPosts(slug).then((result) => setRelatedPosts(result));
     } else {
       getRecentPosts().then((result) => setRelatedPosts(result));
     }
@@ -19,9 +17,8 @@ const PostWidget = ({ categories, slug }) => {
   return (
     <div
       className={`${
-        slug
-          ? ""
-          : "rounded-md bg-gray-100 m-5 text-center sm:px-4 h-fit pb-3 my-2 text-black"
+        slug &&
+        "rounded-md sm:flex sm:flex-col bg-gray-100 m-5 text-center sm:px-4 h-fit pb-3 my-2 text-black"
       }`}
     >
       <h2 className="px-2 text-xl font-semibold mt-7 mb-2 border-b-2 border-gray-400">

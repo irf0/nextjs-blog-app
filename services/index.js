@@ -95,16 +95,10 @@ export const getRecentPosts = async () => {
 };
 
 //Similar Posts API
-export const getSimilarPosts = async (categories, slug) => {
+export const getSimilarPosts = async (slug) => {
   const query = gql`
-    query GetPostDetails($slug: String!, $categories: [String!]) {
-      posts(
-        where: {
-          slug_not: $slug
-          AND: { categories_some: { slug_in: $categories } }
-        }
-        last: 3
-      ) {
+    query GetPostDetails($slug: String!) {
+      posts(where: { slug_not: $slug }, last: 3) {
         title
         featuredImage {
           url
@@ -115,10 +109,11 @@ export const getSimilarPosts = async (categories, slug) => {
     }
   `;
 
-  const result = await request(graphqlAPI, query, { categories, slug });
+  const result = await request(graphqlAPI, query, { slug });
   return result.posts;
 };
 
+//Post comments
 export const submitComment = async (obj) => {
   const result = await fetch("/api/comments", {
     method: "POST",

@@ -1,10 +1,5 @@
-import Head from "next/head";
-import Image from "next/image";
-import Categories from "../components/Categories";
 import HeroBanner from "../components/HeroBanner";
-import Navbar from "../components/Navbar";
 import PostCard from "../components/PostCard";
-import PostWidget from "../components/PostWidget";
 import { getPosts } from "../services";
 
 const Home = ({ posts }) => {
@@ -15,20 +10,13 @@ const Home = ({ posts }) => {
 
       {/* We'll fetch and display list of posts like product lists here */}
       <div>
-        <div className="flex sm:flex-col">
+        <div className="flex sm:flex-col flex-wrap mx-2">
           {posts.map((post) => (
-            <PostCard post={post.node} />
+            <PostCard post={post.node} key={post.title} />
           ))}
-          <div className="sm:hidden">
-            <PostWidget />
-          </div>
         </div>
 
-        <div>
-          <div className="flex flex-col lg:hidden md:hidden xl:hidden">
-            <PostWidget />
-          </div>
-        </div>
+        <div></div>
       </div>
     </>
   );
