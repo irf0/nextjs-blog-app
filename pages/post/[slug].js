@@ -25,7 +25,7 @@ const PostDetails = ({ post }) => {
             <CommentsForm slug={post.slug} />
             <Comments slug={post.slug} />
           </div>
-          <div className="sm:flex mx-5 w-4/5 justify-center lg:hidden xl:hidden md:hidden">
+          <div className="sm:flex mx-3 w-11/12 justify-center lg:hidden xl:hidden md:hidden">
             <PostWidget slug={post.slug} />
           </div>
         </div>
