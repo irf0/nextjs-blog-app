@@ -16,7 +16,7 @@ const PostCard = ({ post }) => {
               <img
                 src={post?.author?.photo?.url}
                 alt={post?.author?.name}
-                className="w-10 h-10"
+                className="w-7 h-7"
               />
               <p className="flex items-center font-carter-one text-gray-600 cursor-pointer">
                 {post?.author?.name}

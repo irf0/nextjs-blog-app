@@ -30,7 +30,7 @@ const PostWidget = ({ categories, slug }) => {
 
       {relatedPosts.map((post) => (
         <Link href={`post/${post.slug}`}>
-          <div className="flex mx-3 cursor-pointer">
+          <div className="flex mx-3 cursor-pointer my-2">
             <img
               src={post.featuredImage.url}
               alt={post.title}
