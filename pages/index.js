@@ -15,7 +15,7 @@ const Home = ({ posts }) => {
 
       {/* We'll fetch and display list of posts like product lists here */}
       <div>
-        <div className="flex">
+        <div className="flex sm:flex-col">
           {posts.map((post) => (
             <PostCard post={post.node} />
           ))}
