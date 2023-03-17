@@ -17,6 +17,10 @@ const Layout = ({ children, post, isDarkMode, setIsDarkMode }) => {
           name="description"
           content="Discover the latest insights and perspectives on web development with our blog. Get expert tips, tutorials, and news on building fast, scalable, and modern web applications"
         />
+        <meta
+          name="google-site-verification"
+          content="vpKDHLC6XQkarWKakUk3FAhVr-hBZ55BX_cY_fllyF4"
+        />
       </Head>
 
       <header>
