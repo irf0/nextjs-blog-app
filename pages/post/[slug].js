@@ -4,15 +4,16 @@ import Author from "../../components/Author";
 import CommentsForm from "../../components/CommentsForm";
 import Comments from "../../components/Comments";
 import PostWidget from "../../components/PostWidget";
+import Loader from "../../components/Loader";
 import { getPostDetails, getPosts } from "../../services";
-
 import { useRouter } from "next/router";
-import Link from "next/link";
 
 const PostDetails = ({ post }) => {
   const router = useRouter();
 
-  const baseUrl = "http://localhost.com"; // Replace with your actual base URL
+  if (router.isFallback) {
+    return <Loader />;
+  }
 
   return (
     <>
@@ -49,6 +50,6 @@ export async function getStaticPaths() {
   const posts = await getPosts();
   return {
     paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback: false,
+    fallback: true,
   };
 }
