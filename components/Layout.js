@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Navbar from "./Navbar";
+import { getPosts } from "../services";
+import { useRouter } from "next/router";
 
-const Layout = ({ children, isDarkMode, setIsDarkMode }) => {
+const Layout = ({ children, post, isDarkMode, setIsDarkMode }) => {
+  const router = useRouter();
+  const { slug } = router.query;
+  const title = slug ? `${slug}` : "Dev Speaks";
   return (
     <>
       <Head>
-        <title>DevSpeaks</title>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -23,4 +28,10 @@ const Layout = ({ children, isDarkMode, setIsDarkMode }) => {
   );
 };
 
+export async function getStaticProps() {
+  const posts = (await getPosts()) || [];
+  return {
+    props: { posts },
+  };
+}
 export default Layout;
