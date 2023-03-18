@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import HeroBanner from "../components/HeroBanner";
 import PostCard from "../components/PostCard";
 import { getPosts } from "../services";
@@ -16,7 +17,9 @@ const Home = ({ posts }) => {
           ))}
         </div>
 
-        <div></div>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </>
   );

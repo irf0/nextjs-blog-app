@@ -29,10 +29,6 @@ const Layout = ({ children, post, isDarkMode, setIsDarkMode }) => {
       </header>
 
       <main>{children}</main>
-
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 };

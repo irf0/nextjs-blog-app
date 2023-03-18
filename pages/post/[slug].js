@@ -7,6 +7,7 @@ import PostWidget from "../../components/PostWidget";
 import Loader from "../../components/Loader";
 import { getPostDetails, getPosts } from "../../services";
 import { useRouter } from "next/router";
+import Footer from "../../components/Footer";
 
 const PostDetails = ({ post }) => {
   const router = useRouter();
@@ -25,9 +26,13 @@ const PostDetails = ({ post }) => {
             <CommentsForm slug={post.slug} />
             <Comments slug={post.slug} />
           </div>
+
           <div className="sm:flex mx-3 w-11/12 justify-center lg:hidden xl:hidden md:hidden">
             <PostWidget slug={post.slug} />
           </div>
+          <footer>
+            <Footer />
+          </footer>
         </div>
         <div className="flex mx-5 w-1/5 justify-center sm:hidden">
           <PostWidget slug={post.slug} />
