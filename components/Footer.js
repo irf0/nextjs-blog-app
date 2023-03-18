@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <div className="h-10 my-2 font-Montserrat font-semibold w-full shadow-xl z-10 flex justify-center items-center text-center">
         <p>
-          This Blog App was made with <span className="text-red-600">❤</span> by{" "}
+          Made with <span className="text-red-600">❤</span> by{" "}
           <Link href="https://dev-irfan.vercel.app/" target="_blank">
             <span className="underline">dev_Irfan</span>
           </Link>
