@@ -3,6 +3,7 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import { getPosts } from "../services";
 import { useRouter } from "next/router";
+import Footer from "./Footer";
 
 const Layout = ({ children, post, isDarkMode, setIsDarkMode }) => {
   const router = useRouter();
@@ -28,6 +29,10 @@ const Layout = ({ children, post, isDarkMode, setIsDarkMode }) => {
       </header>
 
       <main>{children}</main>
+
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
